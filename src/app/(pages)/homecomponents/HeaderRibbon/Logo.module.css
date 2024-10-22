@@ -1,0 +1,39 @@
+.boxBefore {
+  position: absolute;
+  width: 0;
+  height: 0;
+  top: 100%;
+  left: 0;
+  z-index: -1;
+}
+
+.boxAfter {
+  position: absolute;
+  width: 0;
+  height: 0;
+  top: 100%;
+  right: 0;
+  z-index: -1;
+}
+
+/* Triángulo grande para offset 0 */
+.large.boxBefore {
+  border-top: 40px solid #ffca3c;
+  border-left: 100px solid transparent;
+}
+
+.large.boxAfter {
+  border-top: 40px solid #ffca3c;
+  border-right: 100px solid transparent; /* Cambiado a la derecha */
+}
+
+/* Triángulo pequeño para offset diferente de 0 */
+.small.boxBefore {
+  border-top: 27px solid #ffca3c;
+  border-left: 100px solid transparent;
+}
+
+.small.boxAfter {
+  border-top: 27px solid #ffca3c;
+  border-right: 100px solid transparent; /* Cambiado a la derecha */
+}
