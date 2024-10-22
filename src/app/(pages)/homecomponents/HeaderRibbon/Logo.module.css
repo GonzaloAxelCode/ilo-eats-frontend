@@ -18,22 +18,22 @@
 
 /* Triángulo grande para offset 0 */
 .large.boxBefore {
-  border-top: 40px solid #ffca3c;
+  border-top: 40px solid #fcb900;
   border-left: 100px solid transparent;
 }
 
 .large.boxAfter {
-  border-top: 40px solid #ffca3c;
+  border-top: 40px solid #fcb900;
   border-right: 100px solid transparent; /* Cambiado a la derecha */
 }
 
 /* Triángulo pequeño para offset diferente de 0 */
 .small.boxBefore {
-  border-top: 27px solid #ffca3c;
+  border-top: 27px solid #fcb900;
   border-left: 100px solid transparent;
 }
 
 .small.boxAfter {
-  border-top: 27px solid #ffca3c;
+  border-top: 27px solid #fcb900;
   border-right: 100px solid transparent; /* Cambiado a la derecha */
 }

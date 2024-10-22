@@ -50,3 +50,64 @@ body::-webkit-scrollbar-track:active {
  a{
   text-decoration: none;
  }
+
+ /**
+ CARROUSEL
+ 
+ **/
+  .BannerSlideWrapper {
+    width: 100vw;
+    position: relative;
+    z-index:1;
+  }
+ .BannerSlideWrapper .rec-slider-container {
+  margin: 0;
+}
+
+.BannerSlideWrapper {
+  cursor: grab;
+}
+
+.BannerSlideWrapper .rec.rec-arrow {
+  position: absolute;
+  display: none;
+  border-radius: 50px;
+  background-color: #fff;
+  color: red;
+  border: none;
+  margin-top: 5em;
+  margin-left: 0.5em;
+  margin-right: 0.5em;
+}
+
+.BannerSlideWrapper .rec-pagination {
+  display: none;
+}
+
+.BannerSlideWrapper .rec-carousel-item:focus {
+  outline: none;
+  box-shadow: inset 0 0 1px 1px lightgrey;
+}
+
+.BannerSlideWrapper .izuVIe {
+  justify-content: flex-start;
+  width: 100%;
+}
+
+.BannerSlideWrapper .rec-carousel-item {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.ImageBanner {
+
+  transition: 0.3s all;
+  margin-right: -3em;
+}
+
+.ImageBanner img {
+  object-fit: contain;
+  user-select: none;
+}
+
