@@ -10,7 +10,7 @@ const OrderCallNumber = () => {
             <p className="hidden text-[13px] text-[#4b4b4b] m-0 md:block font-extrabold">Order Online or Call Now</p>
             <div className="flex items-center justify-center">
                 <FiPhoneCall className="text-white md:text-[#4b4b4b]" />
-                <span className="hidden md:block text-[16px] font-rubik-bold text-[#4b4b4b] ml-1">
+                <span className="hidden md:block text-[16px] font-rubik-bold text-[#4b4b4b] font-bold ml-1">
                     +555 234 766
                 </span>
             </div>

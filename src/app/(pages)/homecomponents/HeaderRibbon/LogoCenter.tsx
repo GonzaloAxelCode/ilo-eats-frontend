@@ -7,7 +7,7 @@ const LogoCenter = () => {
 
         <div className="absolute w-[200px] top-2 left-1/2 transform -translate-x-1/2">
             <div
-                className={`relative transition-all duration-300 bg-[#fcb900] ${offset == 0 ? "h-[125px]" : "h-[95px]"
+                className={`relative transition-all duration-300 bg-[#ffca3c] ${offset == 0 ? "h-[125px]" : "h-[95px]"
                     }`}
             >
                 <div

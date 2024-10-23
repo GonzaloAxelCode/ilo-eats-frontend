@@ -2,6 +2,7 @@ import React from "react";
 
 type SizeOptions = "13px" | "14px" | "16px" | "19px" | "24px" | "32px";
 
+
 interface PProps {
     size?: SizeOptions;
     color?: string;
