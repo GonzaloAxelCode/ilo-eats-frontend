@@ -14,12 +14,14 @@ const Home = () => {
             <HeaderRibbon />
             <FloatNavigationCategories />
             <HomeBannerSlider />
-            <FoodsCategorySimple />
-            <FoodCombos />
-            <GrilledBurgers />
-            <OnlineOrderPromo />
-            <MoreGreatSides />
-            <ServiceOverview />
+            <div className='mx-auto max-w-screen-xl'>
+                <FoodsCategorySimple />
+                <FoodCombos />
+                <GrilledBurgers />
+                <OnlineOrderPromo />
+                <MoreGreatSides />
+                <ServiceOverview />
+            </div>
             <NewestLatestOffersSubscribe />
         </main>
 

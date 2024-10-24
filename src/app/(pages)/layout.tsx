@@ -42,7 +42,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <Providers>
-        <body className={`${RubikLight.variable} ${RubikRegular.variable} ${RubikMedium.variable} ${RubikSemiBold.variable} ${RubikBold.variable} antialiased`}>
+        <body className={`${RubikLight.variable} ${RubikRegular.variable} ${RubikMedium.variable} ${RubikSemiBold.variable} ${RubikBold.variable} antialiased `}>
           {children}
         </body>
       </Providers>

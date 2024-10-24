@@ -32,7 +32,7 @@ const data_burgers = [{
 const FloatNavigationCategories = () => {
     const offset = 0
     return (
-        <div className="z-10 absolute left-1/2 top-[12rem]   -translate-x-1/2 mx-auto w-[1269px] max-w-[1360px]">
+        <div className="hidden xl:block  z-10 absolute left-1/2 top-[12rem]   -translate-x-1/2 mx-auto w-[1269px] max-w-[1360px]">
             <div
                 className={`relative bg-[#ffca3c] flex justify-center rounded-[8px] transition-all duration-200  py-2
         ${offset === 0 ? " overflow-visible" : "max-h-0 overflow-hidden"}`}

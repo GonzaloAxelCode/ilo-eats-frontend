@@ -3,8 +3,8 @@ import { FiHeart, FiSearch, FiShoppingBag, FiUser } from "react-icons/fi";
 const ActionAppControls = () => {
     return (
         <div
-            className="bg-white rounded-full flex flex-col items-center w-[48px] h-[174px] justify-center p-[11px] absolute right-[0rem] top-[6rem] 
-            md:flex-row md:h-[48px] md:w-[184px] md:p-[6px_11px_6px_5px]  md:shadow-[0_0_30px_rgba(0,0,0,0.12)]"
+            className="bg-white rounded-full flex flex-col items-center w-[48px] h-[174px] justify-center p-[11px] absolute right-[1rem] top-[70vh] md:top-[6rem]
+            md:flex-row md:h-[48px] md:w-[184px] md:p-[6px_11px_6px_5px]  shadow-[0_0_30px_rgba(0,0,0,0.12)]"
         >
             <Item type="account" onClick={() => null} Icon={FiUser} />
             <Item

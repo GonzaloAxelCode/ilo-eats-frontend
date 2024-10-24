@@ -7,7 +7,7 @@ const ItemRibbon = ({ links = [], children, path = "#" }: any) => {
     return (
         <div
             onMouseEnter={() => setIsOpen(true)}
-            onMouseLeave={() => setIsOpen(false)} className=" relative text-white cursor-pointer px-2 h-15 flex justify-center items-center">
+            onMouseLeave={() => setIsOpen(false)} className="hidden xl:flex relative text-white cursor-pointer px-2 h-15  justify-center items-center">
             <ul className="flex items-center">
                 <li className="font-[var(--font-rubik-regular)]  text-xs transition duration-250 flex items-center">
                     <Link href={path} className="uppercase">

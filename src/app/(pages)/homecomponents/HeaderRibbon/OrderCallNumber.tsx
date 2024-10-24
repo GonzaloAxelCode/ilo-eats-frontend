@@ -3,7 +3,7 @@ import { FiPhoneCall } from "react-icons/fi";
 const OrderCallNumber = () => {
     return (
         <div
-            className="  cursor-pointer font-rubik sm:bg-[#a1ba32] sm:rounded-full sm:w-[48px] sm:h-[48px] sm:p-[11px] sm:absolute sm:left-[0em] sm:top-[6em] sm:z-[9999] sm:flex sm:items-center sm:justify-center sm:shadow-[0_0_30px_rgba(0,0,0,0.12)] 
+            className="  cursor-pointer font-rubik sm:bg-[#a1ba32] sm:rounded-full sm:w-[48px] sm:h-[48px] sm:p-[11px] sm:absolute  left-[1rem] sm:top-[6em] sm:z-[9999] sm:flex sm:items-center sm:justify-center sm:shadow-[0_0_30px_rgba(0,0,0,0.12)] 
       md:w-[190px] md:h-[48px] md:p-[6px_11px_6px_5px] md:bg-white md:shadow-[0_0_30px_rgba(0,0,0,0.12)] md:flex-col md:font-rubik md:rounded-full"
             onClick={() => alert("call direction")}
         >
