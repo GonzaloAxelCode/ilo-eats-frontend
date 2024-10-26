@@ -1,3 +1,4 @@
+import Footer from '../main/components/Footer';
 import FloatNavigationCategories from './homecomponents/FloatNavigationCategories';
 import FoodCombos from './homecomponents/FoodCombos';
 import FoodsCategorySimple from './homecomponents/FoodsCategorySimple';
@@ -22,7 +23,9 @@ const Home = () => {
                 <MoreGreatSides />
                 <ServiceOverview />
             </div>
+
             <NewestLatestOffersSubscribe />
+            <Footer />
         </main>
 
     )

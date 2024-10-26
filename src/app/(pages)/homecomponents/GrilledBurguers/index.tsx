@@ -293,9 +293,12 @@ export const cartTemp = {
 const GrilledBurguers = () => {
     return (
         <div >
-            <h1>CHAR-GRILLED BURGERS</h1>
-            <p>Hand-crafted fresh to order. Smashed to lock in flavor on a toasted brioche bun.
-                Served with garlic dill pickles & fries.</p>
+
+            <div className="w-full py-20">
+                <h1 className="text-center text-4xl font-bold mx-auto">CHAR-GRILLED BURGERS</h1>
+                <p className="text-center text-gray-500 max-w-[80%] mx-auto">Hand-crafted fresh to order. Smashed to lock in flavor on a toasted brioche bun.
+                    Served with garlic dill pickles & fries.</p>
+            </div>
             <div className="grid grid-cols-[repeat(auto-fit,_minmax(300px,_1fr))] gap-4">
                 {data_burgers.map((el: any, index: number) => {
                     return <div key={index}>

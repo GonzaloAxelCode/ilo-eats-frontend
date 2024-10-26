@@ -40,9 +40,11 @@ const more_greast_data = [
 const MoreGreatSides = () => {
     return (
         <div className="px-10">
-            <h1>CHAR-GRILLED BURGERS</h1>
-            <p>Hand-crafted fresh to order. Smashed to lock in flavor on a toasted brioche bun.
-                Served with garlic dill pickles & fries.</p>
+            <div className="w-full py-20">
+                <h1 className="text-center text-4xl font-bold mx-auto">CHAR-GRILLED BURGERS</h1>
+                <p className="text-center text-gray-500 max-w-[80%] mx-auto">Hand-crafted fresh to order. Smashed to lock in flavor on a toasted brioche bun.
+                    Served with garlic dill pickles & fries.</p>
+            </div>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-6">
                 <div className="flex flex-col gap-5">
                     {more_greast_data.slice(3).map((el: any, index: number) => {
