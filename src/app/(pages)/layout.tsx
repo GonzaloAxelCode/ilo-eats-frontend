@@ -1,8 +1,11 @@
+
+
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 
 import "../globals.css";
 import Providers from "../providers";
+import SlidesPage from "./slidesPage";
 
 const RubikLight = localFont({
   src: "../fonts/Rubik/static/Rubik-Light.ttf",
@@ -43,7 +46,9 @@ export default function RootLayout({
     <html lang="en">
       <Providers>
         <body className={`${RubikLight.variable} ${RubikRegular.variable} ${RubikMedium.variable} ${RubikSemiBold.variable} ${RubikBold.variable} antialiased `}>
+
           {children}
+          <SlidesPage />
         </body>
       </Providers>
     </html>

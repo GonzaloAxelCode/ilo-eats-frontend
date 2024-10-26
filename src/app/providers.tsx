@@ -1,16 +1,16 @@
 "use client"
 
-import { Provider } from 'react-redux';
+import { Provider as ReduxProvider } from 'react-redux';
+import { UIProvider } from './main/context/UIContext';
 import { appStoreImplementation } from "./main/data/appStoreImplementation";
 
 const Providers = ({ children }: any) => {
   return (
-    <Provider store={appStoreImplementation}>
-      {children}
-    </Provider>
-
-
-
+    <UIProvider>
+      <ReduxProvider store={appStoreImplementation}>
+        {children}
+      </ReduxProvider>
+    </UIProvider>
   )
 }
 

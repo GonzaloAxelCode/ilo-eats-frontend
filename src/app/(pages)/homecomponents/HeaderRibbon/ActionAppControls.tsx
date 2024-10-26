@@ -1,6 +1,9 @@
+import { useUICart, useUISearch } from "@/app/main/context/UIContext";
 import { FiHeart, FiSearch, FiShoppingBag, FiUser } from "react-icons/fi";
 
 const ActionAppControls = () => {
+    const { openCart } = useUICart();
+    const { openSearch } = useUISearch();
     return (
         <div
             className="bg-white rounded-full flex flex-col items-center w-[48px] h-[174px] justify-center p-[11px] absolute right-[1rem] top-[70vh] md:top-[6rem]
@@ -15,13 +18,13 @@ const ActionAppControls = () => {
             />
             <Item
                 type="cart"
-                onClick={() => null}
+                onClick={openCart}
                 Icon={FiShoppingBag}
                 number={1}
             />
             <Item
                 type="search"
-                onClick={() => null}
+                onClick={openSearch}
                 Icon={FiSearch}
             />
         </div>
