@@ -3,7 +3,7 @@ import Button from "@/app/main/components/Buttons";
 import CustomCarousel from "@/app/utils/custom-carrousel";
 import Image from "next/image";
 
-// Array de objetos que contiene la información para cada slide del carrusel
+
 const carouselItems = [
     {
         backgroundImage: "url('https://lafka.althemist.com/fastfood/wp-content/uploads/sites/2/2021/06/yellow-lafka-hero-back.jpg?id=5617')",
