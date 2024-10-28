@@ -1,4 +1,5 @@
 "use client"
+import Button from "@/app/main/components/Buttons";
 import Checkbox from "@/app/main/components/ChecksAndRadios/CheckboxOption";
 import CustomRadio from "@/app/main/components/ChecksAndRadios/CustomRadio";
 import { useState } from "react";
@@ -40,6 +41,7 @@ const ProductOptions = () => {
     const [selectedSize, setSelectedSize] = useState(product.sizes[0]);
     const [selectedCrust, setSelectedCrust] = useState(product.crusts[0]);
     const [selectedExtras, setSelectedExtras] = useState(new Set());
+    const [quantity, setQuantity] = useState<number>(1)
 
     const toggleExtra = (extra: any) => {
         const newExtras = new Set(selectedExtras);
@@ -53,11 +55,8 @@ const ProductOptions = () => {
 
     const calculateTotalPrice = () => {
         let total = product.original_price;
-        // Sumar el precio del tamaño
         total += selectedSize.price;
-        // Sumar el precio de la masa
         total += selectedCrust.price;
-        // Sumar el precio de los extras seleccionados
         selectedExtras.forEach((extra) => {
             const extraItem = product.extras.find((e) => e.name === extra);
             if (extraItem) {
@@ -108,6 +107,17 @@ const ProductOptions = () => {
                 />
             ))}
             <h3>Total Price: ${calculateTotalPrice()}</h3>
+            <div className="flex">
+                <div>
+                    <span onClick={() => setQuantity((prev: number) => prev + 1)}>+</span>
+                    <span>{quantity}</span>
+                    <span onClick={() => setQuantity((prev: number) => Math.max(prev - 1, 0))}>-</span>
+                </div>
+                <Button type="secondary" label="ORDER" />
+                <button>
+
+                </button>
+            </div>
         </div>
     );
 };
