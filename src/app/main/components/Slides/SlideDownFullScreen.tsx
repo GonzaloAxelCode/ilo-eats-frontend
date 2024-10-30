@@ -3,13 +3,14 @@ import { VscChromeClose } from "react-icons/vsc";
 
 import { createPortal } from 'react-dom';
 
-const SlideDownFullScreen = ({ isOpen, setOpen, children }: any) => {
+
+const SlideDownFullScreen = ({ isOpen, setOpen, children, }: any) => {
 
     return (
         <div>
             {createPortal(<div >
                 <div
-                    className={`fixed top-0 w-full min-h-screen bg-white overflow-hidden z-[21000] transform transition-transform duration-300 ease-[cubic-bezier(0.77,0,0.175,1)] ${isOpen ? "translate-y-0" : "-translate-y-full"
+                    className={`fixed overflow-y-auto top-0 w-full min-h-screen bg-white overflow-hidden z-[21000] transform transition-transform duration-300 ease-[cubic-bezier(0.77,0,0.175,1)] ${isOpen ? "translate-y-0" : "-translate-y-full"
                         }`}
                 >
                     <div

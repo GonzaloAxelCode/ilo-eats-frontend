@@ -27,7 +27,7 @@ const GroupCombo = ({ combo_list }: any) => {
                     {products.map((product: any) => (
                         <span
                             className="cursor-pointer"
-                            key={product.idProduct} // Usar el id único del producto como key
+                            key={product.idProduct}
                             onClick={() => toggleSelectedProduct(product.idProduct)}
                         >
                             <div
@@ -36,16 +36,16 @@ const GroupCombo = ({ combo_list }: any) => {
                                     borderStyle: "solid",
                                     borderColor:
                                         selectedProductId === product.idProduct
-                                            ? "black" // Borde negro para el producto seleccionado
-                                            : "transparent", // Borde transparente para los no seleccionados
-                                    padding: "5px", // Padding para el contenedor
-                                    marginBottom: "10px" // Separación entre productos
+                                            ? "black"
+                                            : "transparent",
+                                    padding: "5px",
+                                    marginBottom: "10px"
                                 }}
                             >
                                 <img
                                     src={`/images/Food/${product.imageLocal}`}
                                     className="w-[50px] h-[50px]"
-                                    alt={product.description} // Mejorar accesibilidad
+                                    alt={product.description}
                                 />
                             </div>
                         </span>

@@ -43,14 +43,16 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <Providers>
+    <Providers>
+      <html lang="en">
+
         <body className={`${RubikLight.variable} ${RubikRegular.variable} ${RubikMedium.variable} ${RubikSemiBold.variable} ${RubikBold.variable} antialiased `}>
 
           {children}
           <SlidesPage />
         </body>
-      </Providers>
-    </html>
+
+      </html>
+    </Providers>
   );
 }

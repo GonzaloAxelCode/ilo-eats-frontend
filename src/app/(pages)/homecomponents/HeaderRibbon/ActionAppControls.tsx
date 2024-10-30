@@ -1,4 +1,6 @@
-import { useUICart, useUISearch } from "@/app/main/context/UIContext";
+
+import { useUICart } from "@/app/main/uihooks/useUICart";
+import { useUISearch } from "@/app/main/uihooks/useUISearch";
 import { FiHeart, FiSearch, FiShoppingBag, FiUser } from "react-icons/fi";
 
 const ActionAppControls = () => {

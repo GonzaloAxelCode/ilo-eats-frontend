@@ -1,6 +1,7 @@
 
 "use client"
 import Button from "@/app/main/components/Buttons";
+import { useUIProductOrder } from "@/app/main/uihooks/useUIProductOrder";
 import { getDecimalPrice, getNumberPrice, nameFormat } from "@/app/utils/number-operations";
 import Image from "next/image";
 import Link from "next/link";
@@ -291,6 +292,7 @@ export const cartTemp = {
 
 
 const GrilledBurguers = () => {
+    const { openProductOrder } = useUIProductOrder()
     return (
         <div >
 
@@ -338,7 +340,7 @@ const GrilledBurguers = () => {
                             </div>
 
                             <div className="btn-order m-auto">
-                                <Button type="order" label="Order Now" />
+                                <Button type="order" label="Order Now" onClick={() => openProductOrder()} />
                             </div>
                         </div>
                     </div>
