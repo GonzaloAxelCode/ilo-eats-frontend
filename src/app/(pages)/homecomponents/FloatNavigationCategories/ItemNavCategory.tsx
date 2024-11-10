@@ -26,7 +26,11 @@ const ItemNavCategory = ({
 
     return (
         <div
-            className={`${contentPositionFull ? "relative" : ""}`}
+            className={cn(
+                contentPositionFull && "relative",
+                "h-auto my-auto"
+            )}
+
             onMouseEnter={() => setIsOpen(true)}
             onMouseLeave={() => setIsOpen(false)}
             {...props}
@@ -40,7 +44,7 @@ const ItemNavCategory = ({
                 <span className="mr-2 opacity-50">
                     {Icon && <Icon />}
                 </span>
-                <span className="font-rubik-500 text-[#61443e] text-sm font-bold">{label}</span>
+                <span className="font-semibold text-[#61443e] text-sm">{label}</span>
                 <span className="ml-1">{children && <ArrowDown className="w-3 h-3 fill-[#61443e]" />}</span>
             </div>
             {children && (

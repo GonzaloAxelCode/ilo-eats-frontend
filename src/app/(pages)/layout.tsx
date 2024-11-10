@@ -1,33 +1,33 @@
 
 
 import type { Metadata } from "next";
-import localFont from "next/font/local";
 
+import localFont from 'next/font/local';
 import "../globals.css";
 import Providers from "../providers";
 import SlidesPage from "./slidesPage";
 
-const RubikLight = localFont({
+export const RubikLight = localFont({
   src: "../fonts/Rubik/static/Rubik-Light.ttf",
   variable: "--font-rubik-light",
 });
 
-const RubikRegular = localFont({
+export const RubikRegular = localFont({
   src: "../fonts/Rubik/static/Rubik-Regular.ttf",
   variable: "--font-rubik-regular",
 });
 
-const RubikMedium = localFont({
+export const RubikMedium = localFont({
   src: "../fonts/Rubik/static/Rubik-Medium.ttf",
   variable: "--font-rubik-medium",
 });
 
-const RubikSemiBold = localFont({
+export const RubikSemiBold = localFont({
   src: "../fonts/Rubik/static/Rubik-SemiBold.ttf",
   variable: "--font-rubik-semibold",
 });
 
-const RubikBold = localFont({
+export const RubikBold = localFont({
   src: "../fonts/Rubik/static/Rubik-Bold.ttf",
   variable: "--font-rubik-bold",
 });
@@ -46,7 +46,7 @@ export default function RootLayout({
     <Providers>
       <html lang="en">
 
-        <body className={`${RubikLight.variable} ${RubikRegular.variable} ${RubikMedium.variable} ${RubikSemiBold.variable} ${RubikBold.variable} antialiased `}>
+        <body className={`antialiased `}>
 
           {children}
           <SlidesPage />

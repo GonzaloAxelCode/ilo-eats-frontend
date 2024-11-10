@@ -1,7 +1,7 @@
 
 const MapLocation = () => {
     return (
-        <div>MapLocation</div>
+        <div></div>
     )
 }
 

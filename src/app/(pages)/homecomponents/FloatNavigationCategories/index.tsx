@@ -2,6 +2,7 @@
 
 import Button from "@/app/main/components/Buttons"
 import BurguerIcon from "@/app/main/ui/icons/BurguerIcon"
+import useScroll from "@/app/main/uihooks/useScroll"
 import Image from "next/image"
 import Link from "next/link"
 import ItemNavCategory from "./ItemNavCategory"
@@ -30,16 +31,18 @@ const data_burgers = [{
     path: "#"
 }]
 const FloatNavigationCategories = () => {
-    const offset = 0
+
+    const { scrollY } = useScroll()
+
     return (
         <div className="hidden xl:block  z-10 absolute left-1/2 top-[12rem]   -translate-x-1/2 mx-auto w-[1269px] max-w-[1360px]">
             <div
-                className={`relative bg-[#ffca3c] flex justify-center rounded-[8px] transition-all duration-200  py-2
-        ${offset === 0 ? " overflow-visible" : "max-h-0 overflow-hidden"}`}
+                className={`relative bg-[#ffca3c] h-[64px] flex justify-center rounded-[8px] transition-all duration-300 overflow-hidden
+        ${scrollY === 0 ? "max-h-[60px]" : "max-h-0"}`}
             >
 
-                <div className="absolute content-[''] bottom-[20px] left-[20px] w-[50%] top-[40px] shadow-[0_15px_13px_rgba(51,51,51,1)] rotate-[-2deg] z-[-1]" />
-                <div className="absolute content-[''] bottom-[20px] right-[20px] w-[50%] top-[40px] shadow-[0_15px_13px_rgba(51,51,51,1)] rotate-[2deg] z-[-1]" />
+                <div className="absolute content-[''] bottom-[0px] left-[20px] w-[50%] top-[40px] shadow-[0_15px_13px_rgba(51,51,51,1)] rotate-[-2deg] z-[-1]" />
+                <div className="absolute content-[''] bottom-[0px] right-[20px] w-[50%] top-[40px] shadow-[0_15px_13px_rgba(51,51,51,1)] rotate-[2deg] z-[-1]" />
 
 
                 <ItemNavCategory

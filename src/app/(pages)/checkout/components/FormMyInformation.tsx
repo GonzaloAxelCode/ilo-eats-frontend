@@ -7,7 +7,8 @@ const FormMyInformation = () => {
 
     return (
         <div className="flex flex-col">
-            <div className="m-4 flex flex-col">
+            <h3 className="font-bold text-2xl pl-4 py-6">Billing details</h3>
+            <div className="ml-4 flex flex-col">
                 <label className="text-xs uppercase font-medium flex items-center mb-4">
                     FIRST NAME
                     <span className="ml-1">
@@ -16,11 +17,11 @@ const FormMyInformation = () => {
                 </label>
                 <Field
                     name="firstName"
-                    className="border-none outline-none bg-gray-100 p-4 rounded-md"
+                    className="border-none outline-none bg-gray-100 p-4 pl-0 rounded-md"
                 />
             </div>
 
-            <div className="m-4 flex flex-col">
+            <div className="ml-4 flex flex-col">
                 <label className="text-xs uppercase font-medium flex items-center mb-4">
                     LAST NAME
                     <span className="ml-1">
@@ -29,7 +30,7 @@ const FormMyInformation = () => {
                 </label>
                 <Field
                     name="lastName"
-                    className="border-none outline-none bg-gray-100 p-4 rounded-md"
+                    className="border-none outline-none bg-gray-100 p-4 pl-0 rounded-md"
                 />
             </div>
 
@@ -67,7 +68,7 @@ const FormMyInformation = () => {
             </div>
 
             {/* Repeat this structure for the remaining fields, like street address, postcode, etc. */}
-            <div className="m-4 flex flex-col">
+            <div className="ml-4 flex flex-col">
                 <label className="text-xs uppercase font-medium flex items-center mb-4">
                     EMAIL ADDRESS
                     <span className="ml-1">
@@ -77,7 +78,7 @@ const FormMyInformation = () => {
                 <Field
                     name="email"
                     disabled={true}
-                    className="border-none outline-none bg-gray-100 p-4 rounded-md"
+                    className="border-none outline-none bg-gray-100 p-4 pl-0 rounded-md"
                 />
             </div>
         </div>

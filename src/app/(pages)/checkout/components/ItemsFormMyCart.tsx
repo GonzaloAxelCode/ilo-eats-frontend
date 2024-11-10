@@ -1,9 +1,7 @@
 "use client"
 
 import { useUICart } from "@/app/main/uihooks/useUICart";
-import Image from "next/image";
 import Link from "next/link";
-import { FiTrash2 } from "react-icons/fi";
 
 const product = {
     idProduct: "dcjf8wfdfs9fsfsdf",
@@ -75,66 +73,105 @@ const cart_data = {
             product
 
         },
+        {
+            id: 2,
 
+            quantity: 6,
+            customOptions: {
+                negativeAddons: [
+                    {
+                        name: "No Chesse",
+                        price: -1,
+                    },
+                    {
+                        name: "Extra Cheddar",
+                        price: 1,
+                    },
+                    {
+                        name: "Extra Cheddar",
+                        price: 1,
+                    },
+                ],
+                extraToppings: [
+                    {
+                        name: "Fried Onion ",
+                        price: 0.5,
+                    },
+                    {
+                        name: "Fried Onion ",
+                        price: 0.7,
+                    },
+                ],
+            },
+            optionsPrice: 30,
+            subtotal: 20,
+            product
+
+        },
     ],
+
 };
 
 
 const ItemsFormMyCart = () => {
     const { setCartOpen } = useUICart()
     return (
-        <div>
-            <div>
-                {cart_data.items && (
-                    <div className="w-full border-t border-b border-gray-200 mt-12 overflow-y-auto h-[55vh] scrollbar-thin scrollbar-thumb-gray-500 scrollbar-track-gray-300">
-                        {cart_data.items.map((item_cart: any) => (
-                            <div key={item_cart.product.idProduct} className="flex items-center justify-between border-b border-gray-200 p-4">
-                                <div className="flex items-start p-4 space-x-4">
+
+        <div className="flex flex-col">
+            <div className="flex items-center justify-between pl-8 pr-4 py-4 ">
+                <div className="flex items-start space-x-4">
+                    <b>Product</b>
+                </div>
+                <div>
+                    <b>Subtotal</b>
+                </div>
+            </div>
+
+
+            {cart_data.items && (
+                <div className="w-full   overflow-y-auto  scrollbar-thin scrollbar-thumb-gray-500 scrollbar-track-gray-300">
+
+                    {cart_data.items.map((item_cart: any) => (
+                        <div key={item_cart.product.idProduct} className="flex items-center justify-between border-b-1 border-gray-300 p-4">
+                            <div className="flex items-start space-x-0">
+
+                                <div className="flex flex-col ml-4 flex-1">
                                     <div onClick={() => setCartOpen(false)}>
-                                        <Link href={`/fastfood/product/${item_cart.product.name}`}>
+                                        <Link className="text-sm" href={`/fastfood/product/${item_cart.product.name}`}>
 
-                                            <div className="border border-gray-300 rounded-lg overflow-hidden w-16 h-16">
-                                                <Image src={`/images/Food/${item_cart.product.imageLocal}`} alt={item_cart.product.name} layout="responsive" width={60} height={60} />
-                                            </div>
-
+                                            <span className="text-gray-800 font-normal  mb-1">{item_cart.product.name}</span>
+                                            <strong> x 1</strong>
                                         </Link>
                                     </div>
-                                    <div className="flex flex-col ml-4 flex-1">
-                                        <div onClick={() => setCartOpen(false)}>
-                                            <Link href={`/fastfood/product/${item_cart.product.name}`}>
+                                    {item_cart.customOptions?.extraToppings && (
+                                        <div className="flex flex-col flex-wrap text-gray-500 text-xs ">
+                                            <p>Extra Toppings:</p>
+                                            {item_cart.customOptions.extraToppings.map((option: any, index: any) => {
+                                                return <p key={index}>
+                                                    {option.name}
+                                                    <span>
+                                                        {option.price} <sup>.00</sup>
+                                                    </span>
+                                                </p>
+                                            })}
 
-                                                <p className="text-gray-800 font-medium text-sm mb-1">{item_cart.product.name}</p>
-
-                                            </Link>
                                         </div>
-                                        {item_cart.customOptions?.extraToppings && (
-                                            <div className="flex flex-wrap text-gray-500 text-xs space-x-1">
-                                                <p>Extra Toppings:</p>
-                                                {item_cart.customOptions.extraToppings.map((option: any, index: any) => {
-                                                    return <p key={index}>
-                                                        {option.name}
-                                                        <span>
-                                                            {option.price} <sup>.00</sup>
-                                                        </span>
-                                                    </p>
-                                                })}
+                                    )}
 
-                                            </div>
-                                        )}
-                                        <div className="text-red-600 font-semibold text-sm">
-                                            {item_cart.quantity} x <span>${item_cart.product.priceUnit}</span>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div className="cursor-pointer ml-4">
-                                    <FiTrash2 />
                                 </div>
                             </div>
-                        ))}
-                    </div>
-                )}
-            </div>
+
+                            <bdi className="text-black font-medium text-sm">
+                                <span className="text-xs">$</span>
+                                {item_cart.product.priceUnit} <sup>.29</sup>
+
+                            </bdi>
+                        </div>
+                    ))}
+                </div>
+            )}
         </div>
+
     )
 }
 

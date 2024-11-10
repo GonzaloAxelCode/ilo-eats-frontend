@@ -9,7 +9,7 @@ const ItemRibbon = ({ links = [], children, path = "#" }: any) => {
             onMouseEnter={() => setIsOpen(true)}
             onMouseLeave={() => setIsOpen(false)} className="hidden xl:flex relative text-white cursor-pointer px-2 h-15  justify-center items-center">
             <ul className="flex items-center">
-                <li className="font-[var(--font-rubik-regular)]  text-xs transition duration-250 flex items-center">
+                <li className=" font-medium text-xs transition duration-250 gap-1 flex items-center">
                     <Link href={path} className="uppercase">
                         {children}
                     </Link>
@@ -23,7 +23,7 @@ const ItemRibbon = ({ links = [], children, path = "#" }: any) => {
                             className="bg-white text-blackribbon hover:text-white border-gray-200 transition duration-250 rounded-[3px] last:border-b-0 hover:bg-blackribbon"
                         >
                             <Link href={link.link}>
-                                <span className="flex items-center h-[50px] px-[10px] font-rubik-400 text-sm  no-underline">
+                                <span className="flex items-center h-[50px] px-[10px] font-normal text-xs no-underline">
                                     {link.name}
                                 </span>
                             </Link>

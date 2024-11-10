@@ -14,6 +14,11 @@ export interface UIContextProps {
     isProductOrderOpen: boolean,
     setProductOrderOpen: (isOpen: boolean) => void
     openProductOrder: () => void
+
+
+    isProfilePanelOpen: boolean
+    setProfilePanelOpen: (isOpen: boolean) => void
+    openProfilePanel: () => void
 }
 
 export const UIContext = createContext<UIContextProps | undefined>(undefined);
@@ -26,6 +31,8 @@ export const UIProvider: React.FC<UIProviderProps> = ({ children }) => {
     const [isCartOpen, setCartOpen] = useState<boolean>(false);
     const [isSearchOpen, setSearchOpen] = useState<boolean>(false);
     const [isProductOrderOpen, setProductOrderOpen] = useState<boolean>(false);
+    const [isProfilePanelOpen, setProfilePanelOpen] = useState<boolean>(false);
+    const openProfilePanel = () => setProfilePanelOpen(true);
     const openCart = () => setCartOpen(true);
     const openSearch = () => setSearchOpen(true);
     const openProductOrder = () => setProductOrderOpen(true);
@@ -39,7 +46,10 @@ export const UIProvider: React.FC<UIProviderProps> = ({ children }) => {
             openCart,
             isSearchOpen,
             setSearchOpen,
-            openSearch
+            openSearch,
+            isProfilePanelOpen,
+            openProfilePanel,
+            setProfilePanelOpen
         }}>
             {children}
 

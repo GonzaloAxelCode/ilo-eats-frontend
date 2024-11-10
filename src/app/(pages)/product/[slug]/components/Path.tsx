@@ -16,10 +16,10 @@ const data_paths = [
     },
 ];
 
-export default function Path() {
+export default function Path({ links = data_paths }: any) {
     return (
         <div className="flex justify-center items-center text-center">
-            {data_paths.map((path: any, index: number) => (
+            {links.map((path: any, index: number) => (
                 <span key={index} className="flex items-center">
                     {index === data_paths.length - 1 || path.disable ? (
                         <span className="text-gray-500 text-xs uppercase font-rubik">
@@ -33,7 +33,7 @@ export default function Path() {
                         </Link>
                     )}
                     {index < data_paths.length - 1 && (
-                        <span className="mx-2 text-gray-400">/</span>
+                        <span className="mx-1 text-gray-400">/</span>
                     )}
                 </span>
             ))}

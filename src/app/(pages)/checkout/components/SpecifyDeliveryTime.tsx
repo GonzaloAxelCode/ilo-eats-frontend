@@ -1,7 +1,7 @@
 
 const SpecifyDeliveryTime = () => {
     return (
-        <div>SpecifyDeliveryTime</div>
+        <div></div>
     )
 }
 

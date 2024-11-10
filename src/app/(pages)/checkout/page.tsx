@@ -34,13 +34,13 @@ const Checkout = () => {
         <main>
             <LayoutClient>
                 <ContentTitleHolder title="CHECKOUT" />
-                <div className='mx-auto max-w-screen-xl'>
+                <div className='mx-auto max-w-screen-xl px-8'>
                     <Formik initialValues={initialValues} onSubmit={handleSubmit}>
                         {(propsFormik: any) => (
                             <FormOrderProvider formikProps={propsFormik}>
 
 
-                                <Form className="grid grid-cols-1 md:grid-cols-[3fr_2fr] justify-center w-full">
+                                <Form className="grid grid-cols-1 lg:grid-cols-[3fr_2fr] justify-center w-full py-28">
                                     <div>
                                         <SpecifyDeliveryTime />
                                         <FormMyInformation />

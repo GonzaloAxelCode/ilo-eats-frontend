@@ -9,9 +9,11 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-
         "blackribbon": "#222222"
+      },
+      fontFamily: {
 
+        rubik: ['Rubik', 'sans-serif']
       },
     },
   },
