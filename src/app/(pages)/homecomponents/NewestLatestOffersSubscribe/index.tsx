@@ -14,10 +14,10 @@ const NewestLatestOffersSubscribe = () => {
                 </div>
             </div>
             <div className="mx-auto max-w-screen-xl pt-20 pb-14">
-                <div className="flex flex-col items-center justify-center gap-7 px-8 md:px-0 md:max-w-xl mx-auto">
-                    <p className="text-center text-3xl font-bold">Love Burgers? Like Deals?</p>
-                    <p className="text-center text-md max-w-[80%]">Be the first to know about our newest menu items and latest offers.</p>
-                    <div className="w-full rounded-full  bg-white ">
+                <div className="flex flex-col items-center justify-center  px-8 md:px-0 md:max-w-xl mx-auto">
+                    <h2 className="text-center text-3xl font-bold">Love Burgers? Like Deals?</h2>
+                    <p className="text-center text-md text-[#95601C] mt-2 max-w-[90%]">Be the first to know about our newest menu items and latest offers.</p>
+                    <div className="w-full rounded-full  bg-white mt-10">
                         <div className="pl-4 pr-1 py-1 w-full flex">
                             <input type="text" className="outline-none w-full" placeholder="Tu correo electronico" />
                             <Button type="default" label="Subscribe" />

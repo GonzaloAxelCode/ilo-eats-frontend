@@ -296,20 +296,26 @@ const GrilledBurguers = () => {
     return (
         <div >
 
+
             <div className="w-full py-20">
-                <h1 className="text-center text-4xl font-bold mx-auto">CHAR-GRILLED BURGERS</h1>
-                <p className="text-center text-gray-500 max-w-[80%] mx-auto">Hand-crafted fresh to order. Smashed to lock in flavor on a toasted brioche bun.
-                    Served with garlic dill pickles & fries.</p>
+                <h1 className="text-center text-3xl sm:text-4xl font-bold mx-auto">CHAR-GRILLED BURGERS
+                </h1>
+                <p className="text-center text-gray-400 font-semibold my-3 max-w-[80%] mx-auto">
+                    Served with garlic dill pickles & fries.
+                </p>
             </div>
             <div className="grid grid-cols-[repeat(auto-fit,_minmax(300px,_1fr))] gap-4">
                 {data_burgers.map((el: any, index: number) => {
                     return <div key={index}>
                         <div className="p-5 flex flex-col items-center bg-cover">
                             <div className="relative border rounded-lg overflow-hidden border-gray-200">
-                                <div className="absolute left-4 top-4 bg-brown-800 text-white rounded-md px-2 py-1 z-10">
+                                <div className="absolute left-4 top-4 bg-[#4D2C21] text-white rounded-[4px] px-2 py-2 z-10">
                                     <span className="text-sm font-bold">
+                                        <span style={{
+                                            fontSize: "13px"
+                                        }}>$</span>
                                         {getNumberPrice(el.price)}
-                                        <sup className="text-xs">{getDecimalPrice(el.price)}</sup>
+                                        <sup className="text-xs">.{getDecimalPrice(el.price)}</sup>
                                     </span>
                                 </div>
                                 <div className="absolute bottom-0 right-0 p-4 cursor-pointer z-10">

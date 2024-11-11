@@ -96,16 +96,16 @@ export default function Footer() {
 
                 <div className="flex space-x-3">
                     <Link href="/" passHref>
-                        <AiFillFacebook className="w-8 h-8 transition-opacity duration-300 hover:opacity-80" target="_blank" />
+                        <AiFillFacebook className="text-white w-8 h-8 transition-opacity duration-300 hover:opacity-80" target="_blank" />
                     </Link>
                     <Link href="/" passHref>
-                        <AiFillYoutube className="w-8 h-8 transition-opacity duration-300 hover:opacity-80" target="_blank" />
+                        <AiFillYoutube className=" text-white w-8 h-8 transition-opacity duration-300 hover:opacity-80" target="_blank" />
                     </Link>
                     <Link href="/" passHref>
-                        <AiOutlineTwitter className="w-8 h-8 transition-opacity duration-300 hover:opacity-80" target="_blank" />
+                        <AiOutlineTwitter className="text-white  w-8 h-8 transition-opacity duration-300 hover:opacity-80" target="_blank" />
                     </Link>
                     <Link href="/" passHref>
-                        <AiOutlineInstagram className="w-8 h-8 transition-opacity duration-300 hover:opacity-80" target="_blank" />
+                        <AiOutlineInstagram className="text-white w-8 h-8 transition-opacity duration-300 hover:opacity-80" target="_blank" />
                     </Link>
                 </div>
 

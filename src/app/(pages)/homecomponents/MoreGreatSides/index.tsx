@@ -41,9 +41,11 @@ const MoreGreatSides = () => {
     return (
         <div className="px-10">
             <div className="w-full py-20">
-                <h1 className="text-center text-4xl font-bold mx-auto">CHAR-GRILLED BURGERS</h1>
-                <p className="text-center text-gray-500 max-w-[80%] mx-auto">Hand-crafted fresh to order. Smashed to lock in flavor on a toasted brioche bun.
-                    Served with garlic dill pickles & fries.</p>
+                <h1 className="text-center text-3xl sm:text-4xl font-bold mx-auto">MORE GREAT SIDES
+                </h1>
+                <p className="text-center text-gray-400 font-semibold my-3 max-w-[80%] mx-auto">
+                    For every main dish, there is a perfect side.
+                </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-6">
                 <div className="flex flex-col gap-5">
@@ -58,14 +60,15 @@ const MoreGreatSides = () => {
                                     alt={el.name} />
                             </div>
                             <div className="flex flex-col gap-2">
-                                <div className="flex justify-between  gap-2 border-gray-400 border-b-2 border-dotted border-0">
-                                    <h2 className="font-bold">{el.name}</h2>
+                                <div className="flex justify-between  gap-2 border-gray-300 border-b-2 border-dotted border-0">
+                                    <h2 className="font-normal">{el.name}</h2>
                                     <span className="font-bold">
-                                        $4.99
+                                        <span>$</span>4
+                                        <sup>.99</sup>
                                     </span>
                                 </div>
                                 <div>
-                                    <p>{el.description}</p>
+                                    <p className="italic text-[#888888] text-sm">{el.description}</p>
                                 </div>
                                 <div className="hidden"></div>
                             </div>
@@ -85,16 +88,18 @@ const MoreGreatSides = () => {
                                     alt={el.name} />
                             </div>
                             <div className="flex flex-col gap-2">
-                                <div className="flex justify-between  gap-2 border-gray-400 border-b-2 border-dotted border-0">
-                                    <h2 className="font-bold">{el.name}</h2>
+                                <div className="flex justify-between  gap-2 border-gray-300 border-b-2 border-dotted border-0">
+                                    <h2 className="font-normal">{el.name}</h2>
                                     <span className="font-bold">
-                                        $4.99
+                                        <span>$</span>4
+                                        <sup>.99</sup>
                                     </span>
                                 </div>
                                 <div>
-                                    <p>{el.description}</p>
+
+                                    <p className="italic text-[#888888] text-sm">{el.description}</p>
                                 </div>
-                                <div className="hidden"></div>
+
                             </div>
                             <div></div>
                         </div>

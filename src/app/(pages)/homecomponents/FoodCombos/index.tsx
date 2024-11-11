@@ -34,9 +34,9 @@ const FoodCombos = () => {
                 return <div key={index} className="py-8 px-3">
                     <div className=" object-contain overflow-hidden h-52 sm:h-96  md:h-full min-h-52   flex-1 relative flex items-center justify-center ">
                         <div className="absolute left-0 z-10 max-w-[50%] ">
-                            <h4 className="text-2xl font-bold text-[#F2002d]">{el.text}</h4>
-                            <h4 className="text-2xl font-fold text-[#333333]">{el.subtext}</h4>
-                            <p className="text-sm text-[#888888]">{el.description}</p>
+                            <h2 className="text-xl font-bold text-[#F2002D]">{el.text}</h2>
+                            <h2 className="text-2xl font-bold">{el.subtext}</h2>
+                            <p className="text-sm text-[#888888] font-semibold">{el.description}</p>
                         </div>
                         <Link href={el.path} className="inset-1 absolute z-10"></Link>
                         <Image className="absolute object-contain" src={el.bgimage} width={640} height={359} alt={el.text} />
