@@ -18,8 +18,7 @@ const SlidesPage = () => {
     const { isCartOpen, setCartOpen } = useUICart();
     const { isSearchOpen, setSearchOpen } = useUISearch();
     const { isProductOrderOpen, setProductOrderOpen } = useUIProductOrder();
-    const { isProfilePanelOpen,
-        setProfilePanelOpen } = useUIProfile()
+    const { isProfilePanelOpen, setProfilePanelOpen } = useUIProfile()
 
     return (
         <React.Fragment>

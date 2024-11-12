@@ -6,16 +6,16 @@ function Checkbox({ label, checked, onChange, }: any) {
 
     return (
         <div
-            className="flex"
+            className="flex items-center cursor-pointer"
             onClick={handleToggle}
         >
             <input
                 type="checkbox"
                 checked={checked}
                 onChange={handleToggle}
-                className="w-4 h-4 mr-2"
+                className="w-3 h-3 mr-2 cursor-pointer"
             />
-            <label className="text-gray-800">{label}</label>
+            <label className="text-[#888888] cursor-pointer">{label}</label>
         </div>
     );
 }

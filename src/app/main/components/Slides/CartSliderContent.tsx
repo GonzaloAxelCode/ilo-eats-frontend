@@ -115,17 +115,21 @@ const CartDownSliderContent = () => {
                                             </Link>
                                         </div>
                                         {item_cart.customOptions?.extraToppings && (
-                                            <div className="flex flex-wrap text-gray-500 text-xs space-x-1">
-                                                <p>Extra Toppings:</p>
-                                                {item_cart.customOptions.extraToppings.map((option: any, index: any) => {
-                                                    return <p key={index}>
-                                                        {option.name}
-                                                        <span>
-                                                            {option.price} <sup>.00</sup>
-                                                        </span>
-                                                    </p>
-                                                })}
+                                            <div className="flex flex-col flex-wrap text-gray-500 text-xs space-x-1">
+                                                <p className="ml-1 font-semibold">Extra Toppings:</p>
+                                                <div className="flex flex-col">
 
+
+                                                    {item_cart.customOptions.extraToppings.map((option: any, index: any) => {
+                                                        return <p key={index}>
+                                                            {option.name}
+                                                            <span>
+                                                                <span className="text-xs">$</span>{option.price} <sup>.00</sup>
+                                                            </span>
+                                                        </p>
+                                                    })}
+
+                                                </div>
                                             </div>
                                         )}
                                         <div className="text-red-600 font-semibold text-sm">
@@ -144,35 +148,43 @@ const CartDownSliderContent = () => {
                     <p className="text-gray-500 font-medium text-lg">Subtotal</p>
                     <div className="text-gray-900 font-semibold text-lg">
                         <span>
-                            {getNumberPrice(total)} <sup>.{getDecimalPrice(total)}</sup>
+                            <span>$</span>{getNumberPrice(total)}<sup>.{getDecimalPrice(total)}</sup>
                         </span>
                     </div>
                 </div>
                 <div className="flex w-full gap-3">
 
 
-                    <Button
-                        type="primary"
-                        className="w-full"
-                    >
-                        <FiShoppingBag className="mr-2" />
-                        <span>
+                    <Link href="/cart" className="w-full">
 
-                            VIEW CART
-                        </span>
+                        <Button
+                            type="primary"
+                            className="w-full"
+                        >
+                            <FiShoppingBag className="mr-2" />
+                            <span>
 
-                    </Button>
-                    <Button
-                        type="secondary"
-                        className="w-full"
-                    >
-                        <FiCreditCard className="mr-2" />
-                        <span>
-                            CHECKOUT
-                        </span>
+                                VIEW CART
+                            </span>
 
-                    </Button>
+                        </Button>
 
+                    </Link>
+                    <Link href="/checkout" className="w-full">
+
+
+                        <Button
+                            type="secondary"
+                            className="w-full"
+                        >
+                            <FiCreditCard className="mr-2" />
+                            <span>
+                                CHECKOUT
+                            </span>
+
+                        </Button>
+
+                    </Link>
 
                 </div>
             </div>

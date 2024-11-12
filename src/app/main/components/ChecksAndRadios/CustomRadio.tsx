@@ -14,7 +14,8 @@ const CustomRadio = ({ isSelected, onClick, label, selectedStyle = {}, defaultSt
     const containerStyle = {
         display: 'flex',
         alignItems: 'center',
-        padding: '8px',
+        paddingLeft: '0px',
+        paddingTop: '8px',
         cursor: 'pointer',
         borderRadius: '4px',
         backgroundColor: isSelected ? selectedStyle.containerColor : 'transparent',

@@ -1,5 +1,4 @@
 "use client"
-import Button from "@/app/main/components/Buttons";
 import Checkbox from "@/app/main/components/ChecksAndRadios/CheckboxOption";
 import CustomRadio from "@/app/main/components/ChecksAndRadios/CustomRadio";
 import { useState } from "react";
@@ -67,57 +66,62 @@ const ProductOptions = () => {
     };
 
     return (
-        <div>
+        <div className="p-6 flex flex-col gap-3">
 
-            <h3>Sizes:</h3>
-            {product.sizes.map((size) => (
-                <CustomRadio
-                    key={size.medida}
-                    label={`${size.medida} inches`}
-                    isSelected={selectedSize.medida === size.medida}
-                    onClick={() => setSelectedSize(size)}
-                    selectedStyle={{
-                        backgroundColor: 'rgba(59, 130, 246, 0.2)',
-                        borderColor: 'blue',
-                        containerColor: 'rgba(59, 130, 246, 0.1)',
-                    }}
-                />
-            ))}
-            <h3>Crusts:</h3>
-            {product.crusts.map((crust) => (
-                <CustomRadio
-                    key={crust.name}
-                    label={crust.name}
-                    isSelected={selectedCrust.name === crust.name}
-                    onClick={() => setSelectedCrust(crust)}
-                    selectedStyle={{
-                        backgroundColor: 'rgba(59, 130, 246, 0.2)',
-                        borderColor: 'blue',
-                        containerColor: 'rgba(59, 130, 246, 0.1)',
-                    }}
-                />
-            ))}
-            <h3>Extras:</h3>
-            {product.extras.map((extra) => (
-                <Checkbox
-                    key={extra.name}
-                    label={`${extra.name} (+$${extra.price})`}
-                    checked={selectedExtras.has(extra.name)}
-                    onChange={() => toggleExtra(extra.name)}
-                />
-            ))}
-            <h3>Total Price: ${calculateTotalPrice()}</h3>
-            <div className="flex">
-                <div>
-                    <span onClick={() => setQuantity((prev: number) => prev + 1)}>+</span>
-                    <span>{quantity}</span>
-                    <span onClick={() => setQuantity((prev: number) => Math.max(prev - 1, 0))}>-</span>
-                </div>
-                <Button type="secondary" label="ORDER" />
-                <button>
 
-                </button>
+            <div>
+                <h3 className="font-bold text-md mb-">Sizes:</h3>
+                {product.sizes.map((size) => (
+                    <CustomRadio
+                        key={size.medida}
+                        label={`${size.medida} inches`}
+                        isSelected={selectedSize.medida === size.medida}
+                        onClick={() => setSelectedSize(size)}
+                        selectedStyle={{
+                            backgroundColor: 'rgba(59, 130, 246, 0.2)',
+                            borderColor: 'blue',
+                            containerColor: 'rgba(59, 130, 246, 0.1)',
+                        }}
+                    />
+                ))}
             </div>
+
+
+            <div>
+                <h3 className="font-bold text-md mb-">Crusts:</h3>
+                {product.crusts.map((crust) => (
+                    <CustomRadio
+                        key={crust.name}
+                        label={crust.name}
+                        isSelected={selectedCrust.name === crust.name}
+                        onClick={() => setSelectedCrust(crust)}
+                        selectedStyle={{
+                            backgroundColor: 'rgba(59, 130, 246, 0.2)',
+                            borderColor: 'blue',
+                            containerColor: 'rgba(59, 130, 246, 0.1)',
+                        }}
+                    />
+                ))}
+            </div>
+            <div>
+                <h3 className="font-bold text-md mb-2 ">Extras:</h3>
+                <div className="flex flex-col gap-2">
+
+
+                    {product.extras.map((extra) => (
+                        <Checkbox
+                            key={extra.name}
+                            label={`${extra.name} (+$${extra.price})`}
+                            checked={selectedExtras.has(extra.name)}
+                            onChange={() => toggleExtra(extra.name)}
+                        />
+                    ))}
+
+                </div>
+            </div>
+
+
+
         </div>
     );
 };

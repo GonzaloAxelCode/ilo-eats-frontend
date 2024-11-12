@@ -46,21 +46,27 @@ const InformationProduct = () => {
 
     return (
         <div className="p-6 mx-auto">
-            <h1>{info_data_product.title}</h1>
-            <p>{info_data_product.description}</p>
+            <h1 className="text-3xl font-bold">{info_data_product.title}</h1>
+            <p className="text-[#888888] text-sm mt-4">{info_data_product.description}</p>
             <div>
-                <p> Serving size: {info_data_product.serving_size}</p>
+                <p className="text-sm my-6"> Serving size: <span className="text-[#888888]">{info_data_product.serving_size}</span></p>
             </div>
-            <div className="grid grid-cols-5 grid-rows-2 gap-4 p-4">
+            <div className="flex flex-wrap justify-start items-start gap-2 max-w-[430px]">
                 {info_data_product.nutritional_data.map((el: any, index: number) => {
-                    return <div key={index} className="flex flex-col items-center">
-                        <span className="font-semibold">{el.name}</span>
-                        <span>
+                    return <div key={index} className="flex flex-col items-start  flex-1 gap-1">
+                        <span className="text-[#888888] font-normal uppercase text-center text-sm">{el.name}</span>
+                        <span className="font-normal text-center text-sm">
                             {el.amount} {el.unit}
                         </span>
-                        <span className="text-gray-500">{el.percentDI}</span>
+                        <span className="text-[#888888] text-sm">{el.percentDI} <sup>*</sup></span>
+                        <span className="font-normal text-center text-sm">
+                            {el.amount} {el.unit}
+                        </span>
                     </div>
                 })}
+                <span className="text-[#888888] text-xs mt-2"> <sup>*</sup>DI: Recommended Daily Intake based on 2000 calories diet
+                </span>
+                <p className="text-xs my-2">Allergens: Milk, Eggs, Soy, Glutten</p>
             </div>
         </div>
     )
