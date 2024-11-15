@@ -40,7 +40,7 @@ const ProductOptions = () => {
     const [selectedSize, setSelectedSize] = useState(product.sizes[0]);
     const [selectedCrust, setSelectedCrust] = useState(product.crusts[0]);
     const [selectedExtras, setSelectedExtras] = useState(new Set());
-    const [quantity, setQuantity] = useState<number>(1)
+
 
     const toggleExtra = (extra: any) => {
         const newExtras = new Set(selectedExtras);
@@ -51,22 +51,8 @@ const ProductOptions = () => {
         }
         setSelectedExtras(newExtras);
     };
-
-    const calculateTotalPrice = () => {
-        let total = product.original_price;
-        total += selectedSize.price;
-        total += selectedCrust.price;
-        selectedExtras.forEach((extra) => {
-            const extraItem = product.extras.find((e) => e.name === extra);
-            if (extraItem) {
-                total += extraItem.price;
-            }
-        });
-        return total.toFixed(2);
-    };
-
     return (
-        <div className="p-6 flex flex-col gap-3">
+        <div className="p-3 flex flex-col gap-3">
 
 
             <div>

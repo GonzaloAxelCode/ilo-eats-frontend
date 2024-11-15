@@ -45,7 +45,7 @@ const info_data_product = {
 const InformationProduct = () => {
 
     return (
-        <div className="p-6 mx-auto">
+        <div className="p-3 mx-auto">
             <h1 className="text-3xl font-bold">{info_data_product.title}</h1>
             <p className="text-[#888888] text-sm mt-4">{info_data_product.description}</p>
             <div>

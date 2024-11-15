@@ -9,9 +9,12 @@ const ContactsPage = () => {
         <main>
             <LayoutClient>
                 <MapLocationFullScreen />
-                <div className="flex">
-                    <SendMessageForm />
-                    <ContactDeliveryHours />
+                <div className="mx-auto max-w-screen-lg">
+                    <div className="flex gap-5 py-12 my-12">
+                        <SendMessageForm />
+                        <ContactDeliveryHours />
+                    </div>
+
                 </div>
                 <NewestLatestOffersSubscribe />
             </LayoutClient>
